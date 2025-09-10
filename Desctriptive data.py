@@ -34,9 +34,9 @@ mode_reward = stats.mode(reward)
 print("Mode for rewards: %d" % mode_reward, "\n")
 
 #frequencies
-
 habit_freq = habit.value_counts()
-print("The habit frequency", habit_freq)
+filter_habit = habit_freq[habit_freq > 1]
+print("The frequency for", filter_habit)
 
 bat_frequency = bat_num.value_counts()
 print("total sum of values for", bat_frequency)
@@ -109,4 +109,5 @@ print("Population deviation for bat times:", std_bat)
 std_after = sec_after.std()
 std_after = round(std_after, 2)
 print("Population deviation for the rats arriving after the bats:", std_after)
+
 
