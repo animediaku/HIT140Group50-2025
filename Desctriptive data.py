@@ -22,7 +22,7 @@ habit_mode = stats.mode(habit)
 print("Mode for the habit:", habit_mode)
 
 mode_bat = stats.mode(bat_num)
-print("Mode for number of rats: %d" % mode_bat)
+print("Mode for number of bats: %d" % mode_bat)
 
 mode_rat = stats.mode(rat_num)
 print("Mode for number of rats: %d" % mode_rat)
@@ -109,3 +109,4 @@ print("Population deviation for bat times:", std_bat)
 std_after = sec_after.std()
 std_after = round(std_after, 2)
 print("Population deviation for the rats arriving after the bats:", std_after)
+
