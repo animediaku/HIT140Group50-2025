@@ -24,7 +24,11 @@ for i, e in zip(risk, reward):
 
 table = [[a, b], [c, d]]
 ratio, p_value = fisher_exact(table)
-if p_value < 0.05:
+
+print("P-value:", p_value)
+print("Odds Ratio:", ratio)
+
+if p_value <= 0.05:
     print("Reject null hypothesis")
 else:
     print("Fail to reject null hypothesis")
