@@ -14,8 +14,13 @@ rat_num = df2['rat_arrival_number']
 bat_num = df2['bat_landing_number']
 rat_time = df2['rat_minutes']
 food = df2['food_availability']
+habit = df['habit']
+
 
 #modes
+habit_mode = stats.mode(habit)
+print("Mode for the habit:", habit_mode)
+
 mode_bat = stats.mode(bat_num)
 print("Mode for number of rats: %d" % mode_bat)
 
@@ -29,6 +34,10 @@ mode_reward = stats.mode(reward)
 print("Mode for rewards: %d" % mode_reward, "\n")
 
 #frequencies
+
+habit_freq = habit.value_counts()
+print("The habit frequency", habit_freq)
+
 bat_frequency = bat_num.value_counts()
 print("total sum of values for", bat_frequency)
 
